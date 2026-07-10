@@ -1,0 +1,75 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Global safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Global helper primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+             request.auth.token.email == "teriusmin@gmail.com" &&
+             request.auth.token.email_verified == true;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Validation Blueprint for Consultation
+    function isValidConsultation(data) {
+      return data.name is string && data.name.size() >= 1 && data.name.size() <= 100 &&
+             data.phone is string && data.phone.size() >= 5 && data.phone.size() <= 20 &&
+             data.productType is string && data.productType.size() <= 100 &&
+             (data.status == 'pending' || data.status == 'contacting' || data.status == 'completed' || data.status == 'cancelled') &&
+             (!data.keys().hasAny(['thirdPartyAgree']) || data.thirdPartyAgree is bool) &&
+             (!data.keys().hasAny(['attachedFiles']) || (data.attachedFiles is list && data.attachedFiles.size() <= 10));
+    }
+
+    match /consultations/{consultationId} {
+      // Allow creation by anyone, but it must be valid and conform to initial state constraints
+      allow create: if isValidId(consultationId) &&
+                       incoming().keys().hasAll(['name', 'phone', 'productType', 'status', 'createdAt', 'updatedAt']) &&
+                       incoming().keys().size() >= 6 && incoming().keys().size() <= 8 &&
+                       isValidConsultation(incoming()) &&
+                       incoming().status == 'pending' &&
+                       incoming().createdAt == request.time &&
+                       incoming().updatedAt == request.time;
+
+      // Only authorized admins can read, list, and update consultations
+      allow read, list: if isAdmin();
+
+      // Action-based updates for Admin
+      allow update: if isAdmin() &&
+                       incoming().updatedAt == request.time &&
+                       incoming().name == existing().name &&
+                       incoming().phone == existing().phone &&
+                       incoming().productType == existing().productType &&
+                       incoming().createdAt == existing().createdAt &&
+                       (!incoming().keys().hasAny(['thirdPartyAgree']) && !existing().keys().hasAny(['thirdPartyAgree']) || incoming().thirdPartyAgree == existing().thirdPartyAgree) &&
+                       (!incoming().keys().hasAny(['attachedFiles']) && !existing().keys().hasAny(['attachedFiles']) || incoming().attachedFiles == existing().attachedFiles) &&
+                       isValidConsultation(incoming()) &&
+                       (
+                         (!incoming().keys().hasAny(['notes']) && !existing().keys().hasAny(['notes'])) ||
+                         (incoming().keys().hasAll(['notes']) && incoming().notes is string && incoming().notes.size() <= 1000)
+                       );
+
+      // No one can delete consultation records to maintain historical logs
+      allow delete: if false;
+    }
+  }
+}

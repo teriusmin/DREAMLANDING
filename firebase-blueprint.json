@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "Consultation": {
+      "title": "Consultation",
+      "description": "Customer consultation request for internet subscription",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Customer's name"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Customer's phone number"
+        },
+        "productType": {
+          "type": "string",
+          "description": "Selected product category"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "contacting", "completed", "cancelled"],
+          "description": "Status of the consultation request"
+        },
+        "thirdPartyAgree": {
+          "type": "boolean",
+          "description": "Whether the user agreed to the third-party privacy terms"
+        },
+        "attachedFiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "size": { "type": "integer" }
+            }
+          },
+          "description": "Metadata of files attached by the customer"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the consultation request was submitted"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the consultation request was last updated"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Admin notes for this consultation"
+        }
+      },
+      "required": ["name", "phone", "productType", "status", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/consultations/{consultationId}": {
+      "schema": "Consultation",
+      "description": "Collection of customer consultation requests"
+    }
+  }
+}
