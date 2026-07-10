@@ -37,7 +37,7 @@ export default function TrustArea() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-sm font-extrabold text-kt-red uppercase tracking-widest mb-3">TRUST & QUALITY</h2>
-          <p className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 font-display">
+          <p className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-display break-keep">
             왜 드림텔레콤에서 가입해야 할까요?
           </p>
           <div className="w-12 h-1 bg-kt-red mx-auto mt-4 rounded"></div>
