@@ -216,10 +216,10 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                 </div>
 
                 {/* Unified Privacy Consent Container Box */}
-                <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 space-y-4 pt-4">
+                <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-3 sm:p-5 space-y-4 pt-4">
                   {/* All Agree Header Checkbox */}
                   <div className="flex items-center pb-3 border-b border-slate-800/80">
-                    <label className="flex items-center space-x-3 cursor-pointer select-none w-full">
+                    <label className="flex items-center space-x-2.5 sm:space-x-3 cursor-pointer select-none w-full">
                       <input
                         type="checkbox"
                         checked={agree && agreeThirdParty}
@@ -231,7 +231,7 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                         className="w-5 h-5 rounded border-slate-700 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
                         disabled={loading}
                       />
-                      <span className="text-sm sm:text-base font-black text-white leading-tight">
+                      <span className="text-xs sm:text-base font-black text-white leading-tight">
                         개인정보 수집 및 이용, 제3자 제공에 모두 동의합니다.
                       </span>
                     </label>
@@ -241,16 +241,16 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                   <div className="space-y-4">
                     {/* Item 1: Personal Information Collection Consent */}
                     <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs sm:text-sm">
-                        <label className="flex items-center space-x-3 cursor-pointer select-none">
+                      <div className="flex items-center justify-between text-[11px] xs:text-xs sm:text-sm gap-2">
+                        <label className="flex items-center space-x-2 cursor-pointer select-none min-w-0 shrink">
                           <input 
                             type="checkbox"
                             checked={agree}
                             onChange={(e) => setAgree(e.target.checked)}
-                            className="w-4.5 h-4.5 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
+                            className="w-4 h-4 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
                             disabled={loading}
                           />
-                          <span className="font-bold text-slate-300">
+                          <span className="font-bold text-slate-300 whitespace-nowrap">
                             개인정보 수집 및 이용에 동의합니다. <span className="text-kt-red">(필수)</span>
                           </span>
                         </label>
@@ -258,10 +258,10 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                         <button
                           type="button"
                           onClick={() => setShowPrivacyDetails(!showPrivacyDetails)}
-                          className="text-xs font-bold text-red-400 hover:text-red-300 transition-colors flex items-center space-x-0.5 border border-transparent hover:border-red-400/10 rounded px-1.5 py-0.5"
+                          className="text-[11px] xs:text-xs font-bold text-red-400 hover:text-red-300 transition-colors flex items-center space-x-0.5 border border-transparent hover:border-red-400/10 rounded px-1 py-0.5 shrink-0"
                         >
-                          <span>자세히 보기</span>
-                          {showPrivacyDetails ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                          <span className="whitespace-nowrap">자세히 보기</span>
+                          {showPrivacyDetails ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
                         </button>
                       </div>
 
@@ -435,16 +435,16 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
 
                     {/* Item 2: Third Party Information Provision Consent */}
                     <div className="space-y-2 border-t border-slate-800/50 pt-3">
-                      <div className="flex items-center justify-between text-xs sm:text-sm">
-                        <label className="flex items-center space-x-3 cursor-pointer select-none">
+                      <div className="flex items-center justify-between text-[11px] xs:text-xs sm:text-sm gap-2">
+                        <label className="flex items-center space-x-2 cursor-pointer select-none min-w-0 shrink">
                           <input
                             type="checkbox"
                             checked={agreeThirdParty}
                             onChange={(e) => setAgreeThirdParty(e.target.checked)}
-                            className="w-4.5 h-4.5 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
+                            className="w-4 h-4 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
                             disabled={loading}
                           />
-                          <span className="font-bold text-slate-300">
+                          <span className="font-bold text-slate-300 whitespace-nowrap">
                             개인정보 제3자 제공에 동의합니다. <span className="text-kt-red">(필수)</span>
                           </span>
                         </label>
@@ -452,10 +452,10 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                         <button
                           type="button"
                           onClick={() => setShowThirdPartyDetails(!showThirdPartyDetails)}
-                          className="text-xs font-bold text-red-400 hover:text-red-300 transition-colors flex items-center space-x-0.5 border border-transparent hover:border-red-400/10 rounded px-1.5 py-0.5"
+                          className="text-[11px] xs:text-xs font-bold text-red-400 hover:text-red-300 transition-colors flex items-center space-x-0.5 border border-transparent hover:border-red-400/10 rounded px-1 py-0.5 shrink-0"
                         >
-                          <span>자세히 보기</span>
-                          {showThirdPartyDetails ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                          <span className="whitespace-nowrap">자세히 보기</span>
+                          {showThirdPartyDetails ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
                         </button>
                       </div>
 
