@@ -60,13 +60,13 @@ export default function Hero() {
                 <div className="text-slate-400 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-1">
                   드림텔레콤 단독 혜택 제공
                 </div>
-                <div className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white flex flex-wrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2">
+                <div className="text-[14px] xs:text-base sm:text-3xl md:text-4xl font-extrabold text-white flex flex-row flex-nowrap items-center justify-center sm:justify-start gap-1 sm:gap-2 whitespace-nowrap">
                   <span>💰 최대</span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-red-400 font-black">
                     42만원
                   </span>
                   <span className="text-white">+</span>
-                  <span className="text-red-400 border-b-2 border-red-500 pb-0.5 font-bold animate-pulse">
+                  <span className="text-red-400 border-b-2 border-red-500 pb-0.5 font-black text-[17px] xs:text-xl sm:text-4xl md:text-5xl animate-pulse">
                     비밀지원금
                   </span>
                   <span>지급</span>
@@ -80,7 +80,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-medium"
             >
-              인터넷 가입하고 전국 대리점 중 가장 많은 혜택과 맞춤형 사은품을 즉시 챙겨가세요!
+              인터넷 가입하고 전국 대리점 중 가장 많은 혜택과 ☆ 설치 당일 현금 입금 사은품을 챙겨가세요!
             </motion.p>
 
             {/* Bullets Grid */}
@@ -88,12 +88,12 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 gap-2 sm:gap-3.5 max-w-lg mx-auto lg:mx-0 pt-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3.5 max-w-lg mx-auto lg:mx-0 pt-4"
             >
               {bullets.map((bullet, idx) => (
-                <div key={idx} className="flex items-center space-x-1.5 sm:space-x-2.5 bg-slate-800/40 border border-slate-700/30 rounded-xl p-2.5 sm:p-3 hover:bg-slate-800/60 transition-colors">
+                <div key={idx} className="flex items-center space-x-2 bg-slate-800/40 border border-slate-700/30 rounded-xl p-3 hover:bg-slate-800/60 transition-colors">
                   <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-kt-red shrink-0" />
-                  <span className="text-[11px] xs:text-xs sm:text-sm font-bold text-slate-200 leading-tight">{bullet}</span>
+                  <span className="text-xs sm:text-sm font-bold text-slate-200 leading-tight whitespace-nowrap">{bullet}</span>
                 </div>
               ))}
             </motion.div>

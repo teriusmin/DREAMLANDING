@@ -29,7 +29,7 @@ export default function Reviews() {
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-wider mb-3">
             CUSTOMER STORIES
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 font-display">
+          <h2 className="text-xl xs:text-2xl sm:text-4xl font-black tracking-tight text-slate-900 font-display break-keep">
             실시간 고객 가입 생생 후기
           </h2>
           <p className="text-slate-500 text-sm sm:text-base mt-2">

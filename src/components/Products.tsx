@@ -48,7 +48,7 @@ export default function Products({ onSelectProduct }: ProductsProps) {
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-bold tracking-wider mb-3">
             BEST SUBSCRIPTION PLANS
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 font-display">
+          <h2 className="text-xl xs:text-2xl sm:text-4xl font-black tracking-tight text-slate-900 font-display break-keep">
             통신사 맞춤 대표 상품 추천
           </h2>
           <p className="text-slate-500 text-sm sm:text-base mt-2">
@@ -149,7 +149,7 @@ export default function Products({ onSelectProduct }: ProductsProps) {
               
               <div className="space-y-5 relative">
                 <span className="text-xs font-black tracking-widest text-sky-400 uppercase">SUPER COST-EFFECTIVE</span>
-                <h4 className="text-2xl sm:text-3xl font-black font-display leading-tight">
+                <h4 className="text-xl sm:text-2xl font-black font-display leading-tight">
                   KT망 100% 그대로<br />요금만 최대 30% 다이어트
                 </h4>
                 

@@ -20,11 +20,11 @@ export default function Footer() {
       <div className="border-b border-slate-900 bg-slate-900/40 py-16 text-center relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-kt-red/10 rounded-full blur-3xl"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative space-y-6">
-          <h3 className="text-2xl sm:text-3xl font-black text-white font-display">
+          <h3 className="text-lg xs:text-xl sm:text-3xl font-black text-white font-display break-keep">
             아직도 가입을 고민하고 계시나요?
           </h3>
           <div className="text-lg sm:text-xl font-bold text-slate-300">
-            최대 <span className="text-yellow-300 font-extrabold text-xl sm:text-2xl">42만원</span> + <span className="text-red-400 font-extrabold text-xl sm:text-2xl animate-pulse">비밀지원금</span>
+            최대 <span className="text-yellow-300 font-extrabold text-xl sm:text-2xl">42만원</span> + <span className="text-red-400 font-black text-2xl sm:text-3.5xl animate-pulse">비밀지원금</span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 font-semibold max-w-md mx-auto leading-relaxed">
             지금 부담없이 무료 상담 서비스만 신청하셔도 전문 플래너가 맞춤형 최저 견적 요금을 제안해 드립니다.
