@@ -1,6 +1,6 @@
 {
   "name": "드림텔레콤",
-  "description": "KT, SK브로드밴드, LG U+ 인터넷·TV 가입 상담, 최대 현금 사은품 지급",
+  "description": "KT / KT 스카이라이프 인터넷·TV 가입 설치 당일 현금으로 지급",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
