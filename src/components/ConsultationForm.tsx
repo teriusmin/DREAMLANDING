@@ -140,7 +140,7 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
             <Sparkles className="w-3.5 h-3.5" />
             <span>최대 42만원 + 비밀지원금 즉시 지급 혜택</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black tracking-tight font-display text-white">
+          <h2 className="text-[20px] xs:text-[24px] sm:text-[32px] md:text-4xl font-black tracking-tight font-display text-white">
             지금 신청하면 즉시 맞춤 견적 안내
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2">
@@ -242,15 +242,15 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                     {/* Item 1: Personal Information Collection Consent */}
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-[11px] xs:text-xs sm:text-sm gap-2">
-                        <label className="flex items-center space-x-2 cursor-pointer select-none min-w-0 shrink">
+                        <label className="flex items-start space-x-2 cursor-pointer select-none min-w-0 shrink">
                           <input 
                             type="checkbox"
                             checked={agree}
                             onChange={(e) => setAgree(e.target.checked)}
-                            className="w-4 h-4 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
+                            className="w-4 h-4 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0 mt-0.5"
                             disabled={loading}
                           />
-                          <span className="font-bold text-slate-300 whitespace-nowrap">
+                          <span className="font-bold text-slate-300 break-keep">
                             개인정보 수집 및 이용에 동의합니다. <span className="text-kt-red">(필수)</span>
                           </span>
                         </label>
@@ -436,15 +436,15 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                     {/* Item 2: Third Party Information Provision Consent */}
                     <div className="space-y-2 border-t border-slate-800/50 pt-3">
                       <div className="flex items-center justify-between text-[11px] xs:text-xs sm:text-sm gap-2">
-                        <label className="flex items-center space-x-2 cursor-pointer select-none min-w-0 shrink">
+                        <label className="flex items-start space-x-2 cursor-pointer select-none min-w-0 shrink">
                           <input
                             type="checkbox"
                             checked={agreeThirdParty}
                             onChange={(e) => setAgreeThirdParty(e.target.checked)}
-                            className="w-4 h-4 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0"
+                            className="w-4 h-4 rounded border-slate-800 bg-slate-950 text-kt-red focus:ring-0 focus:ring-offset-0 cursor-pointer accent-kt-red shrink-0 mt-0.5"
                             disabled={loading}
                           />
-                          <span className="font-bold text-slate-300 whitespace-nowrap">
+                          <span className="font-bold text-slate-300 break-keep">
                             개인정보 제3자 제공에 동의합니다. <span className="text-kt-red">(필수)</span>
                           </span>
                         </label>
