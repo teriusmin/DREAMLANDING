@@ -1,6 +1,6 @@
 {
-  "name": "드림텔레콤 인터넷 가입",
-  "description": "KT / KT스카이라이프 인터넷 가입 공식 대리점 (주)드림텔레콤의 최대 혜택 보장 인터넷 가입 랜딩페이지입니다.",
+  "name": "드림텔레콤",
+  "description": "KT, SK브로드밴드, LG U+ 인터넷·TV 가입 상담, 최대 현금 사은품 지급",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
