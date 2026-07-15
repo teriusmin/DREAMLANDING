@@ -171,28 +171,28 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name Input */}
                   <div className="space-y-2">
-                    <label className="block text-xs sm:text-sm font-bold text-slate-300">이름</label>
+                    <label className="block text-sm sm:text-lg font-extrabold text-slate-300">이름</label>
                     <input 
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="성함을 입력해 주세요"
                       maxLength={40}
-                      className="w-full bg-slate-900 border border-slate-800 focus:border-kt-red focus:ring-1 focus:ring-kt-red/20 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white font-medium outline-none transition-all placeholder:text-slate-600"
+                      className="w-full bg-slate-900 border border-slate-800 focus:border-kt-red focus:ring-1 focus:ring-kt-red/20 rounded-xl px-5 py-4 text-base sm:text-xl md:text-2xl text-white font-bold outline-none transition-all placeholder:text-slate-600"
                       disabled={loading}
                     />
                   </div>
 
                   {/* Phone Input */}
                   <div className="space-y-2">
-                    <label className="block text-xs sm:text-sm font-bold text-slate-300">연락처</label>
+                    <label className="block text-sm sm:text-lg font-extrabold text-slate-300">연락처</label>
                     <input 
                       type="tel"
                       value={phone}
                       onChange={handlePhoneChange}
                       placeholder="010-____-____"
                       maxLength={13}
-                      className="w-full bg-slate-900 border border-slate-800 focus:border-kt-red focus:ring-1 focus:ring-kt-red/20 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white font-mono font-medium outline-none transition-all placeholder:text-slate-600"
+                      className="w-full bg-slate-900 border border-slate-800 focus:border-kt-red focus:ring-1 focus:ring-kt-red/20 rounded-xl px-5 py-4 text-base sm:text-xl md:text-2xl text-white font-mono font-bold outline-none transition-all placeholder:text-slate-600"
                       disabled={loading}
                     />
                   </div>
