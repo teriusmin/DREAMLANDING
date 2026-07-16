@@ -63,7 +63,7 @@ export default function Hero() {
                 <div className="text-[14px] xs:text-base sm:text-3xl md:text-4xl font-extrabold text-white flex flex-row flex-nowrap items-center justify-center sm:justify-start gap-1 sm:gap-2 whitespace-nowrap">
                   <span>💰 최대</span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-red-400 font-black">
-                    42만원
+                    74만원
                   </span>
                   <span className="text-white">+</span>
                   <span className="text-red-400 border-b-2 border-red-500 pb-0.5 font-black text-[17px] xs:text-xl sm:text-4xl md:text-5xl animate-pulse">
@@ -143,7 +143,7 @@ export default function Hero() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center bg-slate-900/80 rounded-xl p-2.5 sm:p-3 border border-slate-800">
                     <span className="text-xs sm:text-sm font-medium text-slate-300">현금 사은품</span>
-                    <span className="text-sm sm:text-base font-black text-yellow-300">최대 42만원</span>
+                    <span className="text-sm sm:text-base font-black text-yellow-300">최대 74만원</span>
                   </div>
                   <div className="flex justify-between items-center bg-slate-900/80 rounded-xl p-2.5 sm:p-3 border border-slate-800">
                     <span className="text-xs sm:text-sm font-medium text-slate-300">추가 지원 혜택</span>

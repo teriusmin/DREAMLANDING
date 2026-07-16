@@ -138,7 +138,7 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-kt-red/20 border border-kt-red/40 text-red-400 text-xs font-bold tracking-wider mb-4 animate-pulse">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>최대 42만원 + 비밀지원금 즉시 지급 혜택</span>
+            <span>최대 74만원 + 비밀지원금 즉시 지급 혜택</span>
           </div>
           <h2 className="text-[20px] xs:text-[24px] sm:text-[32px] md:text-4xl font-black tracking-tight font-display text-white">
             지금 신청하면 즉시 맞춤 견적 안내
@@ -162,9 +162,9 @@ export default function ConsultationForm({ selectedProduct }: ConsultationFormPr
                 id="form-consultation"
               >
                 {/* Form Title banner */}
-                <div className="bg-gradient-to-r from-red-600/20 to-orange-500/20 rounded-xl p-4 border border-kt-red/20 text-center">
-                  <span className="text-sm font-black text-yellow-300 tracking-wide">
-                    💰 최대 42만원 + 특별 비밀 추가 지원금 상담 대상 포함
+                <div className="bg-gradient-to-r from-red-600/20 to-orange-500/20 rounded-xl p-4 sm:p-5 border border-kt-red/20 text-center">
+                  <span className="text-base sm:text-xl font-black text-yellow-300 tracking-wide">
+                    💰 최대 74만원 + 특별 비밀 추가 지원금 상담 대상 포함
                   </span>
                 </div>
 
