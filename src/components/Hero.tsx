@@ -61,9 +61,9 @@ export default function Hero() {
                   드림텔레콤 단독 혜택 제공
                 </div>
                 <div className="text-[14px] xs:text-base sm:text-3xl md:text-4xl font-extrabold text-white flex flex-row flex-nowrap items-center justify-center sm:justify-start gap-1 sm:gap-2 whitespace-nowrap">
-                  <span>💰 최대</span>
+                  <span>💰 기본</span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-red-400 font-black">
-                    74만원
+                    45만원
                   </span>
                   <span className="text-white">+</span>
                   <span className="text-red-400 border-b-2 border-red-500 pb-0.5 font-black text-[17px] xs:text-xl sm:text-4xl md:text-5xl animate-pulse">
@@ -136,14 +136,16 @@ export default function Hero() {
 
               {/* Reward Visual Graphic */}
               <div className="bg-gradient-to-br from-slate-800 to-slate-950 rounded-2xl p-4 sm:p-5 border border-slate-700/30 space-y-3 sm:space-y-4">
-                <div className="flex justify-between items-center text-[11px] sm:text-xs text-slate-400 font-semibold">
+                <div className="flex flex-wrap justify-between items-center text-xs sm:text-sm text-slate-400 font-semibold gap-2">
                   <span>가입 즉시 증정 사은품</span>
-                  <span className="text-kt-red">당일지급 원칙</span>
+                  <span className="text-base sm:text-xl font-black text-red-400 bg-red-950/60 border border-red-500/40 px-3 py-1 rounded-lg animate-pulse shadow-sm">
+                    ⚡ 당일 현금 지급 원칙
+                  </span>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center bg-slate-900/80 rounded-xl p-2.5 sm:p-3 border border-slate-800">
                     <span className="text-xs sm:text-sm font-medium text-slate-300">현금 사은품</span>
-                    <span className="text-sm sm:text-base font-black text-yellow-300">최대 74만원</span>
+                    <span className="text-sm sm:text-base font-black text-yellow-300">기본 45만원</span>
                   </div>
                   <div className="flex justify-between items-center bg-slate-900/80 rounded-xl p-2.5 sm:p-3 border border-slate-800">
                     <span className="text-xs sm:text-sm font-medium text-slate-300">추가 지원 혜택</span>

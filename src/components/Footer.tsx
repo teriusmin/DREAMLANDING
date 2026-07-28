@@ -24,7 +24,7 @@ export default function Footer() {
             아직도 가입을 고민하고 계시나요?
           </h3>
           <div className="text-lg sm:text-xl font-bold text-slate-300">
-            최대 <span className="text-yellow-300 font-extrabold text-xl sm:text-2xl">74만원</span> + <span className="text-red-400 font-black text-2xl sm:text-3.5xl animate-pulse">비밀지원금</span>
+            기본 <span className="text-yellow-300 font-extrabold text-xl sm:text-2xl">45만원</span> + <span className="text-red-400 font-black text-2xl sm:text-3.5xl animate-pulse">비밀지원금</span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 font-semibold max-w-md mx-auto leading-relaxed">
             지금 부담없이 무료 상담 서비스만 신청하셔도 전문 플래너가 맞춤형 최저 견적 요금을 제안해 드립니다.

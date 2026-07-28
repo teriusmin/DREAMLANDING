@@ -66,9 +66,9 @@ export default function Benefits() {
             {/* Giant Numbers */}
             <div className="my-8 space-y-3 bg-slate-950/50 rounded-2xl p-4 sm:p-5 border border-slate-700/20">
               <div className="flex flex-row justify-between items-center gap-2">
-                <span className="text-xs sm:text-sm text-slate-400 font-medium whitespace-nowrap">최대 지원금</span>
+                <span className="text-xs sm:text-sm text-slate-400 font-medium whitespace-nowrap">기본 지원금</span>
                 <span className="text-2xl sm:text-4xl font-black text-yellow-300 font-display tracking-tight whitespace-nowrap">
-                  740,000원
+                  450,000원
                 </span>
               </div>
               <div className="h-px bg-slate-800"></div>
